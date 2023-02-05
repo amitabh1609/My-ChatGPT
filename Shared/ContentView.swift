@@ -1,21 +1,14 @@
-//
-//  ContentView.swift
-//  My-ChatGPT
-//
-//  Created by Amitabh Choudhury on 04/02/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    
+        
     @Environment(\.colorScheme) var colorScheme
-    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
+    @ObservedObject var vm: ViewModel
     @FocusState var isTextFieldFocused: Bool
     
     var body: some View {
         chatListView
-            .navigationTitle("My-ChatGPT")
+            .navigationTitle("XCA ChatGPT")
     }
     
     var chatListView: some View {
@@ -82,6 +75,11 @@ struct ContentView: View {
                         .rotationEffect(.degrees(45))
                         .font(.system(size: 30))
                 }
+                #if os(macOS)
+                .buttonStyle(.borderless)
+                .keyboardShortcut(.defaultAction)
+                .foregroundColor(.accentColor)
+                #endif
                 .disabled(vm.inputMessage.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
 
             }
@@ -99,7 +97,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            ContentView()
+            ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
         }
     }
 }

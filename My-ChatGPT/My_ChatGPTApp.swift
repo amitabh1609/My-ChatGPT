@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-
-@main
+ @main
 struct My_ChatGPTApp: App {
+    
+    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
     var body: some Scene {
         WindowGroup {
             NavigationStack{
-                ContentView()
+                ContentView(vm: vm)
             }
         }
     }

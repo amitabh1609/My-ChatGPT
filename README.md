@@ -1,3 +1,26 @@
 # My-ChatGPT
 
-Experience the power of conversational AI with the new ChatGPT app, built in Swift. This app utilizes the latest natural language processing technology to provide you with fast and accurate answers to your questions. Simply type or speak your query and receive a prompt and informative response. Whether you're looking for information on a specific topic, need help with a problem, or just want to have a conversation, ChatGPT is here to assist you. With its user-friendly interface and cutting-edge technology, this app is the perfect tool for anyone who wants to interact with advanced AI in a simple and intuitive way.
+Objective: To create an iOS app that leverages the capabilities of the ChatGPT language model and provides an easy-to-use interface for users to interact with the model.
+
+Features:
+
+User-friendly interface for users to input queries or questions.
+Real-time generation of responses from the ChatGPT model.
+Option to switch between text and voice input.
+Ability to save favorite responses.
+Option to share responses via social media or other platforms.
+Technologies:
+
+Swift programming language for iOS app development.
+Made for IOS Mobile, Mac, IWatch.
+OpenAI's API to access the ChatGPT language model.
+Speech recognition and text-to-speech libraries for voice input and output.
+Milestones:
+
+Design and implement user interface.
+Integrate OpenAI API to access the ChatGPT model.
+Implement voice input and output functionality.
+Test and debug the app.
+Launch the app on the App Store.
+
+
